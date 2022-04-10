@@ -6,6 +6,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
+import Footprints from './pages/Footprints/Footprints'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -31,6 +32,7 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
+        <Route path="/create" element={<Footprints user={user}/>} />
         <Route
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
