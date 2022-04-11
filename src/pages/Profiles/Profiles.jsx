@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
+import ProfileCard from '../../components/ProfileCard/ProfileCard'
 
 const Profiles = () => {
   const [profiles, setProfiles] = useState([])
@@ -13,10 +14,13 @@ const Profiles = () => {
     <>
     {console.log("profiles: ",profiles)}
       <h1>How does your footprint compare to others?</h1>
-      {profiles.length ? 
+      {profiles?.length ? 
         <>
-          {profiles.forEach(profile=>
-            <h1 key={profile._id}>{profile.name}</h1>
+          {profiles?.map(profile=>
+            <ProfileCard 
+              profile={profile}
+              key={profile.profile.id}
+            />
           )}
         </>
       :

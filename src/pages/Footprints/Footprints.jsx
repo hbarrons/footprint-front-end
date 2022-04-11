@@ -5,7 +5,7 @@ const Footprints = ({ footprints }) => {
     <>
       <h1>Footprint List Here</h1>
       <section>
-        {console.log(footprints)}
+        {/* {console.log(footprints)} */}
         {footprints.map((footprint) => (
           <FootprintCard 
             footprint={footprint}
@@ -13,7 +13,6 @@ const Footprints = ({ footprints }) => {
           />
         ))}
       </section>
-      {/* <FootprintCard /> */}
     </>
    );
 }

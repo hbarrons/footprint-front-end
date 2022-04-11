@@ -13,6 +13,7 @@ import FootprintDetails from './pages/FootprintDetails/FootprintDetails'
 
 //styles
 import './styles/index.css'
+import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
 
 
 const App = () => {
@@ -82,6 +83,7 @@ const App = () => {
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
         />
+        <Route path="/profiles/:id" element={<ProfileDetails />}/>
       </Routes>
     </>
   )
