@@ -9,6 +9,7 @@ import * as authService from './services/authService'
 import * as footprintService from './services/footprintService'
 import FootprintForm from './pages/Forms/FootprintForm'
 import Footprints from './pages/Footprints/Footprints'
+import FootprintDetails from './pages/FootprintDetails/FootprintDetails'
 
 
 const App = () => {
@@ -68,6 +69,7 @@ const App = () => {
         />
         <Route path="/footprints" element={<Footprints footprints={footprints}/>} />
         <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
+        <Route path="/footprints/:id" element={<FootprintDetails />} />
         <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />
         <Route
           path="/login"
