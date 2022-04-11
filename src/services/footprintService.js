@@ -21,7 +21,6 @@ export const create = async (footprint) => {
 }
 
 export const getAll = async () => {
-  console.log("hit")
   try {
     const res = await fetch(BASE_URL, {
       method: "GET",
