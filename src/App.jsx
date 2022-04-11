@@ -6,9 +6,12 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
-import Footprints from './pages/Footprints/Footprints'
+import * as footprintService from './services/footprintService'
+import FootprintForm from './pages/Forms/FootprintForm'
+
 
 const App = () => {
+  const [footprints, setFootprints] = useState([])
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   console.log(user)
@@ -23,6 +26,23 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const addFootprint = async (footprintData) => {
+    const footprint = await footprintService.create(footprintData)
+    setFootprints([...footprints, footprint])
+  }
+
+  const updateFootprint = async (footprintData) => {
+    const updatedFootprint = await footprintService.update(footprintData)
+    setFootprints(footprints.map((footprint) => (
+      footprint.id === updatedFootprint.id ? updatedFootprint : footprint
+    )))
+  }
+
+  // const deleteFootprint = async (id) => {
+  //   await footprintService.deleteFootprint(id)
+  //   setFootprints(footprints.filter(footprint => footprint.id !== parseInt(id)))
+  // }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -32,7 +52,8 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route path="/create" element={<Footprints user={user}/>} />
+        <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
+        <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />
         <Route
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}

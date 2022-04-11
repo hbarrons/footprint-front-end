@@ -4,15 +4,16 @@ const FootprintInput = ({ form, handleChange }) => {
       <label htmlFor="start">Start (zip code):</label>
       <input
         value={form?.start ? form?.start : ''} onChange={handleChange} id="start"
-        required name="start" type="number" placeholder="Start" autoComplete="off"
+        required name="start" type="text" placeholder="Start" autoComplete="off"
       />
       <label htmlFor="stop">Stop (zip code):</label>
       <input
         value={form?.stop ? form?.stop : ''} onChange={handleChange} id="stop"
-        required name="stop" type="number" placeholder="Stop" autoComplete="off"
+        required name="stop" type="text" placeholder="Stop" autoComplete="off"
       />
-      <label htmlFor="transport-type">Transportation Type:</label>
-      <select name="transport-type">
+      <label htmlFor="transport_mode">Transportation Type:</label>
+      <select name="transport_mode" onChange={handleChange} id="transport-type">
+      <option>--Please Make Selection--</option>
         <option value="driving">Driving</option>
         <option value="walking">Walking</option>
         <option value="cycling">Bike</option>
