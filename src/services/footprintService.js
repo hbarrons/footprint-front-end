@@ -19,3 +19,19 @@ export const create = async (footprint) => {
     throw error
   }
 }
+
+export const getAll = async () => {
+  console.log("hit")
+  try {
+    const res = await fetch(BASE_URL, {
+      method: "GET",
+      headers: {
+        'content-type': 'application/json',
+        Authorization: `Bearer ${tokenService.getToken()}`
+      },
+    })
+    return await res.json()
+  } catch (error) {
+    throw error
+  }
+}

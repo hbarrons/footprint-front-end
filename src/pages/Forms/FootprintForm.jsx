@@ -18,7 +18,7 @@ const FootprintForm = (props) => {
     e.preventDefault()
 		// Conditionally call upon appropriate function
     id ? props.updateFootprint(form) : props.addFootprint(form)
-    // navigate(`/footprints`)
+    navigate(`/footprints`)
   }
 
   const handleChange = (e) => {

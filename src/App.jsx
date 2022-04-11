@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
@@ -17,6 +17,16 @@ const App = () => {
   const navigate = useNavigate()
   console.log(user)
 
+  //useEffects
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await footprintService.getAll()
+      setFootprints(data)
+    }
+    fetchData()
+  }, [])
+
+  //auth
   const handleLogout = () => {
     authService.logout()
     setUser(null)
@@ -27,6 +37,7 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  //footprints
   const addFootprint = async (footprintData) => {
     console.log("new data:", footprintData)
     const footprint = await footprintService.create(footprintData)
@@ -55,7 +66,7 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route path="/footprints" element={<Footprints />} />
+        <Route path="/footprints" element={<Footprints footprints={footprints}/>} />
         <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
         <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />
         <Route
