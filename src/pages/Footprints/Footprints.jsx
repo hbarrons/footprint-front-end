@@ -1,4 +1,3 @@
-import FootprintInput from "../Forms/FootprintInput";
 
 
 const Footprints = (props) => {
@@ -6,8 +5,7 @@ const Footprints = (props) => {
 
   return ( 
     <>
-      <h1>Add Footprint Info here</h1>
-      <FootprintInput />
+      <h1>Footprint List Here</h1>
     </>
    );
 }

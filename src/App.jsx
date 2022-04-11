@@ -8,6 +8,7 @@ import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
 import * as footprintService from './services/footprintService'
 import FootprintForm from './pages/Forms/FootprintForm'
+import Footprints from './pages/Footprints/Footprints'
 
 
 const App = () => {
@@ -27,15 +28,17 @@ const App = () => {
   }
 
   const addFootprint = async (footprintData) => {
+    console.log("new data:", footprintData)
     const footprint = await footprintService.create(footprintData)
     setFootprints([...footprints, footprint])
   }
 
   const updateFootprint = async (footprintData) => {
-    const updatedFootprint = await footprintService.update(footprintData)
-    setFootprints(footprints.map((footprint) => (
-      footprint.id === updatedFootprint.id ? updatedFootprint : footprint
-    )))
+    console.log("updated data:", footprintData)
+    // const updatedFootprint = await footprintService.update(footprintData)
+    // setFootprints(footprints.map((footprint) => (
+    //   footprint.id === updatedFootprint.id ? updatedFootprint : footprint
+    // )))
   }
 
   // const deleteFootprint = async (id) => {
@@ -52,6 +55,7 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
+        <Route path="/footprints" element={<Footprints />} />
         <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
         <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />
         <Route

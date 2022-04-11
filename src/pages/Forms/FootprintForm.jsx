@@ -17,8 +17,8 @@ const FootprintForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 		// Conditionally call upon appropriate function
-    id ? props.updateCat(form) : props.addFootprint(form)
-    navigate(`/cats`)
+    id ? props.updateFootprint(form) : props.addFootprint(form)
+    // navigate(`/footprints`)
   }
 
   const handleChange = (e) => {
@@ -61,4 +61,4 @@ const FootprintForm = (props) => {
   )
 }
 
-export default CatForm
+export default FootprintForm
