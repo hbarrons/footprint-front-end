@@ -11,11 +11,12 @@ const Profiles = () => {
 
   return (
     <>
-      <h1>Hello. This is a list of all the profiles.</h1>
+    {console.log("profiles: ",profiles)}
+      <h1>How does your footprint compare to others?</h1>
       {profiles.length ? 
         <>
-          {profiles.map(profile=>
-            <p key={profile._id}>{profile.name}</p>
+          {profiles.forEach(profile=>
+            <h1 key={profile._id}>{profile.name}</h1>
           )}
         </>
       :
