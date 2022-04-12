@@ -55,7 +55,7 @@ const LoginForm = props => {
         />
       </div>
       <div>
-      <button type="button" class="btn btn-success">Log In</button>
+      <button class="btn btn-success">Log In</button>
         <Link to="/">
           <button type="button" class="btn btn-success">Cancel</button>
         </Link>
