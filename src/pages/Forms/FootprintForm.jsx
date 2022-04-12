@@ -25,23 +25,6 @@ const FootprintForm = (props) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-
-
-  // useEffect(() => {
-  //   const fetchOne = async () => {
-  //     const data = await getOne(id)
-  //     setForm({
-  //       id: data.footprint.id,
-  //       start: data.footprint.id,
-  //       stop: data.footprint.id,
-  //       transportation: data.footprint.id,
-  //       passengers: data.footprint.id
-  //     })
-  //   }
-  //   id && fetchOne()
-  //   return () => setForm({})
-  // }, [id])
-
   return (
     <>
       <div className="page-header">
