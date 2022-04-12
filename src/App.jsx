@@ -60,7 +60,7 @@ const App = () => {
   const deleteFootprint = async (id) => {
     await footprintService.deleteFootprint(id)
     setFootprints(footprints.filter(footprint => footprint.id !== parseInt(id)))
-    // navigate('/footprints')
+    navigate('/footprints')
   }
 
   return (

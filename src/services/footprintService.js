@@ -38,7 +38,7 @@ export const getAll = async () => {
 export const deleteFootprint = async (id) => {
   console.log("service delete: ", id)
   try {
-    const res = await fetch(`${BASE_URL}/delete`, {
+    const res = await fetch(`${BASE_URL}delete/${id}`, {
       method: "DELETE",
       headers: {
         'content-type': 'application/json',
