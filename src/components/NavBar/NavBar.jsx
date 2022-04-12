@@ -5,7 +5,7 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav className='navbar navbar-expand-lg navbar-light bg-light'>
-          <Link to="/myprofile" class="navbar-brand">my Footprint</Link>
+          <Link to="/footprints" className="navbar-brand">my Footprint</Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -15,15 +15,14 @@ const NavBar = ({ user, handleLogout }) => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <div className='container-fluid'>
               <ul className='navbar-nav'>
-                <li nav-item><Link to="/footprints/new" className='nav-link active'>Add Footprint</Link></li>
-                <li nav-item><Link to="/footprints" className='nav-link active'>My Footprints</Link></li>
-                <li nav-item><Link to="/profiles" className='nav-link active'>Profiles</Link></li>
-                <li nav-item><Link to="" onClick={handleLogout} className='nav-link active'>LOG OUT</Link></li>
+                <li nav-item="true"><Link to="/footprints/new" className='nav-link active'>Add Footprint</Link></li>
+                <li nav-item="true"><Link to="/profiles" className='nav-link active'>Profiles</Link></li>
+                <li nav-item="true"><Link to="" onClick={handleLogout} className='nav-link active'>LOG OUT</Link></li>
               </ul>
             </div>
           </div>

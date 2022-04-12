@@ -71,7 +71,7 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route path="/footprints" element={<Footprints footprints={footprints}/>} />
+        <Route path="/footprints" element={<Footprints footprints={footprints} user={user}/>} />
         <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
         <Route path="/footprints/:id" element={<FootprintDetails />} />
         <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />
