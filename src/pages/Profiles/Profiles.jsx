@@ -17,6 +17,7 @@ const Profiles = ({ profiles, footprints }) => {
               <ProfileCard 
                 profile={profile}
                 key={profile.profile.id}
+                footprints={footprints}
               />
             )}
           </>
