@@ -35,3 +35,9 @@ a {
 a:hover {
   color: rgb(172,200,141);
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}

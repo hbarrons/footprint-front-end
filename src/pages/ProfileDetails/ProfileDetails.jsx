@@ -2,11 +2,13 @@ import { useLocation } from "react-router-dom";
 
 const ProfileDetails = ({ footprints, transportIcons }) => {
   let location = useLocation()
+  let transportArr = []
 
   let gramsArray = footprints?.map((footprint) => {
     let total = 0
     if (footprint.profile_id === location.state?.profile.id) {
       total = total + footprint?.carbon_grams
+      transportArr.push(footprint.transport_mode)
     }
     return total
   })
@@ -14,13 +16,11 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
   let totalGrams = gramsArray.length ?
     gramsArray?.reduce((a, b) => a + b)
     :
-    console.log("empty array")
+    "No Footprints"
 
   let totalTons = (totalGrams * 0.0000011023).toString().slice(0, 5)
 
-  console.log(totalGrams)
-
-  // let idx = footprint?.transport_mode === 'walking' ? 1 : footprint?.transport_mode === 'e-bike' ? 2 : footprint?.transport_mode === 'driving' ? 3 : footprint?.transport_mode === 'cycling' ? 0 : ""
+  console.log(transportArr)
 
   return ( 
     <>
@@ -31,7 +31,7 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
         <h2>Average Footprint <br /> {(totalGrams / gramsArray.length).toFixed(0)} g / footprint</h2>
         <br />
         <h2>Preferred Transportation <br />
-          <img src="" alt="" />
+          <img src={transportIcons[0]} alt="" />
         </h2>
       </section>
     </>
