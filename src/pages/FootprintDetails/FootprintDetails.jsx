@@ -7,6 +7,7 @@ const FootprintDetails = ({ deleteFootprint }) => {
   let readDate = (location.state.footprint.created_at).substring(0, 16)
   console.log(readDate)
 
+
   return ( 
     <>
     {console.log(deleteFootprint)}

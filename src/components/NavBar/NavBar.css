@@ -17,3 +17,7 @@ nav {
   margin-right: 20px;
   background-color: rgb(172,200,141);
 }
+
+.navbar-brand {
+  margin-left: 20px;
+}
