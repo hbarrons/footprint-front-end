@@ -9,6 +9,7 @@ body {
   background-size: 100% 40%;
   background-position: bottom;
   background-color: rgb(247,246,226);
+  background-attachment: fixed;
 }
 
 div.card {
@@ -21,10 +22,7 @@ div.card {
   padding: 10px;
 }
 
-nav {
-  width: 100%;
-}
-
-.navbar-custom {
-  background-color: rgb(104,160,53);
+.footprints {
+  display: flex;
+  flex-flow: wrap;
 }

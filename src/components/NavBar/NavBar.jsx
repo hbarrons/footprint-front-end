@@ -5,10 +5,14 @@ import './NavBar.css'
 
 
 const NavBar = ({ user, handleLogout }) => {
+
+  
+
+
   return (
     <>
       {user ?
-        <nav className='navbar navbar-expand-lg navbar-dark navbar-custom'>
+        <nav className='navbar navbar-fixed-top navbar-expand-lg navbar-dark navbar-custom'>
           <Link to="/footprints" className="navbar-brand">my Footprint</Link>
           <button
             className="navbar-toggler"

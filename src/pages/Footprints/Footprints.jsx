@@ -4,7 +4,7 @@ const Footprints = ({ footprints, user }) => {
   return ( 
     <>
       <h1>My Footprints</h1>
-      <section>
+      <section className="footprints">
           <>
           {console.log(user.id)}
           {console.log(footprints)}
@@ -18,17 +18,6 @@ const Footprints = ({ footprints, user }) => {
               }
             })}
           </>
-        
-
-
-
-
-        {/* {footprints.map((footprint) => (
-          <FootprintCard 
-            footprint={footprint}
-            key={footprint.id}
-          />
-        ))} */}
       </section>
     </>
    );

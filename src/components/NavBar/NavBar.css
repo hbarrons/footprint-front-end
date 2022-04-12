@@ -1,7 +1,13 @@
 nav {
   width: 100%;
+  position: fixed;
 }
 
-.bg-primary {
-  background-color: rgb(168,207,56);
+.navbar-custom {
+  background-color: rgb(104,160,53);
+}
+
+.navbar-toggler {
+  margin-right: 20px;
+  background-color: rgb(172,200,141);
 }
