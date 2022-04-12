@@ -89,12 +89,12 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
+      <div>
+        <button disabled={isFormInvalid()} type="button" className="btn btn-success">
           Sign Up
         </button>
         <Link to="/">
-          <button>Cancel</button>
+          <button type="button" className="btn btn-success">Cancel</button>
         </Link>
       </div>
     </form>

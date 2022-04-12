@@ -7,10 +7,15 @@
 }
 
 .label,
-.button {
+button {
   margin-right: 0.5rem;
 }
 
 .inputContainer {
   margin-bottom: 1rem;
 }
+
+main {
+  margin-top: 100px;
+}
+
