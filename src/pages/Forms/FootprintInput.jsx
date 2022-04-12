@@ -22,7 +22,7 @@ const FootprintInput = ({ form, handleChange }) => {
       <label htmlFor="numPassengers">Number of Passengers:</label>
       <input
         value={form?.numPassengers ? form?.numPassengers : ''} onChange={handleChange} id="numPassengers"
-        required name="numPassengers" type="number" placeholder="Age" autoComplete="off"
+        required name="numPassengers" type="number"autoComplete="off"
       />
     </>
   )

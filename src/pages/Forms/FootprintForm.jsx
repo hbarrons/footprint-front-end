@@ -37,7 +37,7 @@ const FootprintForm = (props) => {
       <section className="form-container">
         <form onSubmit={handleSubmit}>
           <FootprintInput form={form} handleChange={handleChange} />
-          <button type="submit" className="btn submit">Submit!</button>
+          <button type="submit" className="btn btn-success">Submit!</button>
         </form>
       </section>
     </>
