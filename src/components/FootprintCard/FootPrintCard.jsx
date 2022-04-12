@@ -10,7 +10,7 @@ const FootprintCard = ({ footprint }) => {
       <div className="card">
         <h2 className='card-title'>{readDate}</h2>
         <h5 className='card-text'>Distance: {footprint.distance}</h5>
-        <h5 className='card-text'>CO2 (grams): {footprint.carbon_grams}</h5>
+        <h5 className='card-text'>CO2 (g): {footprint.carbon_grams}</h5>
       </div>
     </Link>
    );

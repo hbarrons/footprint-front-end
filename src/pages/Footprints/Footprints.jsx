@@ -23,7 +23,8 @@ const Footprints = ({ footprints, user }) => {
 
   return ( 
     <>
-      <h2>Total Footprint <br />{totalGrams} grams / {totalTons} tons</h2>
+      <br />
+      <h2>Total Footprint <br />{totalGrams} g / {totalTons} tons</h2>
       <br /><br />
       <h1>My Footprints:</h1>
       <section className="footprints">
