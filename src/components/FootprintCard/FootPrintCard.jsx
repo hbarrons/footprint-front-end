@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const FootprintCard = ({ footprint }) => {
 
-  let readDate = footprint.created_at.substring(0, 16)
+  let readDate = footprint?.created_at?.substring(0, 16)
 
   return ( 
     <Link to={`/footprints/${footprint.id}`} state={{footprint}}>

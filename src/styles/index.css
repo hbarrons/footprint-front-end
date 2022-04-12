@@ -6,7 +6,9 @@ html {
 }
 
 body {
-  font-family: 'Bebas Neue', cursive;
+  width: 100%;
+  text-align: center;
+  font-family: 'Viga', sans-serif;
   background-image: url('/src/assets/GreenCity.jpeg');
   background-repeat: no-repeat;
   background-size: 100% 40%;

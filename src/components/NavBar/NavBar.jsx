@@ -30,7 +30,7 @@ const NavBar = ({ user, handleLogout }) => {
               <ul className='navbar-nav'>
                 <li nav-item="true"><Link to="/footprints/new" className='nav-link active'>Add Footprint</Link></li>
                 <li nav-item="true"><Link to="/profiles" className='nav-link active'>Profiles</Link></li>
-                <li nav-item="true"><Link to="" onClick={handleLogout} className='nav-link active'>LOG OUT</Link></li>
+                <li nav-item="true"><Link to="" onClick={handleLogout} className='nav-link active'>Log Out</Link></li>
               </ul>
             </div>
           </div>

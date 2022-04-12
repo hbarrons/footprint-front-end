@@ -1,4 +1,6 @@
 import FootprintCard from "../../components/FootprintCard/FootPrintCard";
+import './Footprints.css'
+
 
 const Footprints = ({ footprints, user }) => {
 
@@ -21,12 +23,11 @@ const Footprints = ({ footprints, user }) => {
 
   return ( 
     <>
-      <h1>My Footprints</h1>
-      <h2>My Total Footprint: {totalGrams} grams / {totalTons} tons</h2>
+      <h2>Total Footprint <br />{totalGrams} grams / {totalTons} tons</h2>
+      <br /><br />
+      <h1>My Footprints:</h1>
       <section className="footprints">
           <>
-          {console.log(user.id)}
-          {console.log(footprints)}
             {footprints.map((footprint) => {
               console.log(footprint.profile_id)
               if (footprint.profile_id === user?.id) {
