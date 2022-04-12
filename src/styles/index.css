@@ -1,5 +1,14 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  background-image: url('/src/assets/EmissionsBackground.jpeg');
+  background-image: url('/src/assets/GreenCity.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
+  background-position: bottom;
+  background-color: rgb(247,246,226);
 }
 
 div.card {
@@ -11,5 +20,5 @@ div.card {
 }
 
 nav {
-  width: 100vh;
+  width: 100%;
 }
