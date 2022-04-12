@@ -14,11 +14,17 @@ body {
 div.card {
   width: 350px;
   display: flex;
+  align-items: center;
   flex-flow: wrap;
   margin: 10px;
+  margin-right: 0px;
   padding: 10px;
 }
 
 nav {
   width: 100%;
+}
+
+.navbar-custom {
+  background-color: rgb(104,160,53);
 }
