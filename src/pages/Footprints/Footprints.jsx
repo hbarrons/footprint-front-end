@@ -24,12 +24,13 @@ const Footprints = ({ footprints, user, transportIcons }) => {
   return ( 
     <>
       <br />
-      <h2>Total Footprint <br />{totalGrams} g / {totalTons} tons</h2>
+      <h1>Total Footprint </h1>
+      <h3>{totalGrams} g / {totalTons} tons</h3>
       <br /><br />
-      <h1>My Footprints</h1>
+      <h3>Footprints</h3>
       <section className="footprints">
           <>
-            {footprints.map((footprint) => {
+            {footprints.slice(0).reverse().map((footprint) => {
               console.log(footprint.profile_id)
               if (footprint.profile_id === user?.id) {
                 return <FootprintCard
