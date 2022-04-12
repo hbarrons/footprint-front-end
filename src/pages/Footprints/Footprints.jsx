@@ -2,7 +2,7 @@ import FootprintCard from "../../components/FootprintCard/FootPrintCard";
 import './Footprints.css'
 
 
-const Footprints = ({ footprints, user }) => {
+const Footprints = ({ footprints, user, transportIcons }) => {
 
   let gramsArray = footprints?.map((footprint) => {
     let total = 0
@@ -35,6 +35,7 @@ const Footprints = ({ footprints, user }) => {
                 return <FootprintCard
                   footprint={footprint}
                   key={footprint.id}
+                  transportIcons={transportIcons}
                 />
               }
             })}

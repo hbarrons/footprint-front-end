@@ -15,12 +15,21 @@ import FootprintDetails from './pages/FootprintDetails/FootprintDetails'
 import './styles/index.css'
 import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
 
+//Image Assets
+import Bike from './assets/bike.png'
+import Walk from './assets/walking.png'
+import Scooter from './assets/scooter.png'
+import Car from './assets/car.png'
+
 
 const App = () => {
   const [footprints, setFootprints] = useState([])
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   console.log(user)
+
+  //icons
+  const transportIcons = [Bike, Walk, Scooter, Car]
 
   //useEffects
   useEffect(() => {
@@ -72,7 +81,7 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route path="/footprints" element={<Footprints footprints={footprints} user={user}/>} />
+        <Route path="/footprints" element={<Footprints footprints={footprints} user={user} transportIcons={transportIcons}/>} />
         <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
         <Route path="/footprints/:id" element={<FootprintDetails deleteFootprint={deleteFootprint}/>} />
         <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />
