@@ -100,7 +100,7 @@ const App = () => {
           path="/profiles"
           element={user ? <Profiles profiles={profiles} footprints={footprints}/> : <Navigate to="/login" />}
         />
-        <Route path="/profiles/:id" element={<ProfileDetails footprints={footprints}/>}/>
+        <Route path="/profiles/:id" element={<ProfileDetails footprints={footprints} transportIcons={transportIcons}/>}/>
       </Routes>
     </>
   )
