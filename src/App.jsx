@@ -57,10 +57,11 @@ const App = () => {
     // )))
   }
 
-  // const deleteFootprint = async (id) => {
-  //   await footprintService.deleteFootprint(id)
-  //   setFootprints(footprints.filter(footprint => footprint.id !== parseInt(id)))
-  // }
+  const deleteFootprint = async (id) => {
+    console.log("delete id: ", id)
+    // await footprintService.deleteFootprint(id)
+    // setFootprints(footprints.filter(footprint => footprint.id !== parseInt(id)))
+  }
 
   return (
     <>
@@ -74,7 +75,7 @@ const App = () => {
         <Route path="/footprints" element={<Footprints footprints={footprints} user={user}/>} />
         <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
         <Route path="/footprints/:id" element={<FootprintDetails />} />
-        <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />
+        <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} deleteFootprint={deleteFootprint}/>
         <Route
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
