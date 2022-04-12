@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 
+
 const FootprintCard = ({ footprint }) => {
+
+
   return ( 
-    <Link to={`/footprints/${footprint.id}`}>
+    <Link to={`/footprints/${footprint.id}`} state={{footprint}}>
       <div className="card">
         <h1 className='card-title'>See Footprint Details:</h1>
         <h4 className='card-text'>Distance: {footprint.distance}</h4>

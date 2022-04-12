@@ -2,7 +2,7 @@ body {
   background-image: url('/src/assets/EmissionsBackground.jpeg');
 }
 
-div {
+div.card {
   width: 350px;
   display: flex;
   flex-flow: wrap;
