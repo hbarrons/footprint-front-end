@@ -14,7 +14,7 @@ const FootprintCard = ({ footprint, transportIcons }) => {
         <div>
           <img src={transportIcons[idx]} alt="" />
         </div>
-        <h5 className='card-text'>Distance: {footprint.distance}</h5>
+        <h5 className='card-text'>Distance: {footprint.distance} miles</h5>
         <h5 className='card-text'>CO2 (g): {footprint.carbon_grams}</h5>
       </div>
     </Link>

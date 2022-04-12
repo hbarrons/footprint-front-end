@@ -12,8 +12,6 @@ const FootprintDetails = ({ deleteFootprint, transportIcons }) => {
 
   return ( 
     <>
-    {console.log(deleteFootprint)}
-    {console.log(location.state.footprint.id)}
       <div className="details">
         <h1>Footprint Info</h1>
         <h4>{readDate}</h4>

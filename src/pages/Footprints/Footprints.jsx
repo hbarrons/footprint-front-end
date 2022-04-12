@@ -26,7 +26,7 @@ const Footprints = ({ footprints, user, transportIcons }) => {
       <br />
       <h2>Total Footprint <br />{totalGrams} g / {totalTons} tons</h2>
       <br /><br />
-      <h1>My Footprints:</h1>
+      <h1>My Footprints</h1>
       <section className="footprints">
           <>
             {footprints.map((footprint) => {

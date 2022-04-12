@@ -7,6 +7,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
 import * as footprintService from './services/footprintService'
+import * as profileService from './services/profileService'
 import FootprintForm from './pages/Forms/FootprintForm'
 import Footprints from './pages/Footprints/Footprints'
 import FootprintDetails from './pages/FootprintDetails/FootprintDetails'
@@ -24,9 +25,9 @@ import Car from './assets/car.png'
 
 const App = () => {
   const [footprints, setFootprints] = useState([])
+  const [profiles, setProfiles] = useState([])
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
-  console.log(user)
 
   //icons
   const transportIcons = [Bike, Walk, Scooter, Car]
@@ -39,6 +40,12 @@ const App = () => {
     }
     fetchData()
   }, [])
+
+  useEffect(()=> {
+    profileService.getAllProfiles()
+    .then(profiles => setProfiles(profiles))
+  }, [])
+
 
   //auth
   const handleLogout = () => {
@@ -91,9 +98,9 @@ const App = () => {
         />
         <Route
           path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
+          element={user ? <Profiles profiles={profiles} footprints={footprints}/> : <Navigate to="/login" />}
         />
-        <Route path="/profiles/:id" element={<ProfileDetails />}/>
+        <Route path="/profiles/:id" element={<ProfileDetails footprints={footprints}/>}/>
       </Routes>
     </>
   )
