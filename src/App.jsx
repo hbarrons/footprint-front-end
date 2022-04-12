@@ -83,7 +83,7 @@ const App = () => {
         />
         <Route path="/footprints" element={<Footprints footprints={footprints} user={user} transportIcons={transportIcons}/>} />
         <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
-        <Route path="/footprints/:id" element={<FootprintDetails deleteFootprint={deleteFootprint}/>} />
+        <Route path="/footprints/:id" element={<FootprintDetails deleteFootprint={deleteFootprint} transportIcons={transportIcons}/>} />
         <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />
         <Route
           path="/login"
