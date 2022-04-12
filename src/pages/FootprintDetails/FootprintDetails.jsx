@@ -6,6 +6,8 @@ const FootprintDetails = ({ deleteFootprint }) => {
 
   return ( 
     <>
+    {console.log(deleteFootprint)}
+    {console.log(location.state.footprint.id)}
       <div className="details">
         <h1>Footprint Info:</h1>
         <h4>Date: {location.state.footprint.created_at}</h4>
@@ -17,7 +19,7 @@ const FootprintDetails = ({ deleteFootprint }) => {
         <Link to={`/footprints/${location.state.footprint.id}/edit`}>
           <button className="btn btn-primary">Update</button>
         </Link>
-        <button onSubmit={deleteFootprint}  className="btn btn-danger">Delete</button>
+        <button onClick={() => deleteFootprint(location.state.footprint.id)}  className="btn btn-danger">Delete</button>
       </div>
     </>
    );

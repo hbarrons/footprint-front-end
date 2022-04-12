@@ -34,3 +34,19 @@ export const getAll = async () => {
     throw error
   }
 }
+
+export const deleteFootprint = async (id) => {
+  console.log("service delete: ", id)
+  try {
+    const res = await fetch(`${BASE_URL}/delete`, {
+      method: "DELETE",
+      headers: {
+        'content-type': 'application/json',
+        Authorization: `Bearer ${tokenService.getToken()}`
+      },
+    })
+    return await res.json()
+  } catch (error) {
+    throw error
+  }
+}
