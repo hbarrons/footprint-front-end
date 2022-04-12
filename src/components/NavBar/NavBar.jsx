@@ -13,7 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav className='navbar navbar-fixed-top navbar-expand-lg navbar-dark navbar-custom'>
-          <Link to="/footprints" className="navbar-brand">my Footprint</Link>
+          <Link to="/footprints" className="navbar-brand">My Footprint</Link>
           <button
             className="navbar-toggler"
             type="button"

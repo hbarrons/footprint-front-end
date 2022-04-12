@@ -4,13 +4,16 @@ import { Link, useLocation } from "react-router-dom";
 const FootprintDetails = ({ deleteFootprint }) => {
   let location = useLocation()
 
+  let readDate = (location.state.footprint.created_at).substring(0, 16)
+  console.log(readDate)
+
   return ( 
     <>
     {console.log(deleteFootprint)}
     {console.log(location.state.footprint.id)}
       <div className="details">
-        <h1>Footprint Info:</h1>
-        <h4>Date: {location.state.footprint.created_at}</h4>
+        <h1>Footprint Info</h1>
+        <h4>Date: {readDate}</h4>
         <h4>Distance: {location.state.footprint.distance}</h4>
         <h4>Transportation Method: {location.state.footprint.transport_mode}</h4>
         <h4>CO2: {location.state.footprint.carbon_grams}g</h4>

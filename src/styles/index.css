@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  font-family: 'Bebas Neue', cursive;
   background-image: url('/src/assets/GreenCity.jpeg');
   background-repeat: no-repeat;
   background-size: 100% 40%;
@@ -19,6 +20,11 @@ div.card {
   align-items: left;
   margin: 15px;
   padding: 10px;
+}
+
+div.card:hover {
+  box-shadow: 2px 4px rgb(172,200,141);
+  
 }
 
 .footprints {
