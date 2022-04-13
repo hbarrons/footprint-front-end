@@ -6,7 +6,7 @@ const ProfileCard = ({ profile, footprints }) => {
   let gramsArray = footprints?.map((footprint) => {
     let total = 0
     if (footprint.profile_id === profile?.profile.id) {
-      total = total + footprint?.carbon_grams
+      total = total + parseInt(footprint?.carbon_grams)
     }
     return total
   })
