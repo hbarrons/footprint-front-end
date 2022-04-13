@@ -7,7 +7,7 @@ const Footprints = ({ footprints, user, transportIcons, greenTransportIcons }) =
   let gramsArray = footprints?.map((footprint) => {
     let total = 0
     if (footprint.profile_id === user?.id) {
-      total = total + footprint?.carbon_grams
+      total = total + parseInt(footprint?.carbon_grams)
     }
     return total
   })
@@ -18,6 +18,8 @@ const Footprints = ({ footprints, user, transportIcons, greenTransportIcons }) =
     ""
 
   let totalTons = (totalGrams * 0.0000011023).toString().slice(0, 5)
+  console.log(totalGrams)
+  console.log(typeof(gramsArray[0]))
 
   return ( 
     <>
