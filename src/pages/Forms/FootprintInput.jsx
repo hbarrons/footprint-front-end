@@ -1,3 +1,5 @@
+import './FootprintForm.css'
+
 const FootprintInput = ({ form, handleChange }) => {
   return (
     <>
@@ -9,15 +11,15 @@ const FootprintInput = ({ form, handleChange }) => {
       <label htmlFor="stop">Stop (zip code):</label>
       <input
         value={form?.stop ? form?.stop : ''} onChange={handleChange} id="stop"
-        required name="stop" type="text" placeholder="Stop" autoComplete="off"
+        required name="stop" type="text" placeholder="Stop" autoComplete="off" 
       />
       <label htmlFor="transport_mode">Transportation Type:</label>
-      <select name="transport_mode" onChange={handleChange} id="transport-type">
-      <option>--Please Make Selection--</option>
+      <select name="transport_mode" onChange={handleChange} id="transport-type" required>
+      <option value="" selected disabled hidden required>--Please Make Selection--</option>
         <option value="driving">Driving</option>
         <option value="walking">Walking</option>
-        <option value="cycling">Bike</option>
-        <option value="e-bike">Electric Bike/Scooter</option>
+        <option value="cycling">Bicycle</option>
+        <option value="e-bike">Electric Scooter/Bicycle</option>
       </select>
       <label htmlFor="numPassengers">Number of Passengers:</label>
       <input

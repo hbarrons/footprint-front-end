@@ -29,8 +29,8 @@ const FootprintForm = (props) => {
     <>
       <div className="page-header">
         {id
-          ? <h1>Edit Footprint</h1>
-          : <><h1>Add Footprint</h1></>
+          ? <h1 className='addedit-fp'>Edit Footprint</h1>
+          : <><h1 className='addedit-fp'>Add Footprint</h1></>
         }
       </div>
 
