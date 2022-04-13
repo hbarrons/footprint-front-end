@@ -9,7 +9,7 @@ const FootprintCard = ({ footprint, transportIcons, greenTransportIcons }) => {
 
   return ( 
     <Link to={`/footprints/${footprint.id}`} state={{footprint}}>
-      <div className="card">
+      <div className="card profilecard">
         <h2 className='card-title cardcolor'>{readDate}</h2>
         <div>
           <img src={transportIcons[idx]} onMouseOver={e => e.currentTarget.src = greenTransportIcons[idx]} onMouseOut={e => e.currentTarget.src = transportIcons[idx]}   alt=""/>

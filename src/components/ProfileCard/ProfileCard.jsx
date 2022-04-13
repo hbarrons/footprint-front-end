@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import './ProfileCard.css'
 
 const ProfileCard = ({ profile, footprints }) => {
 
@@ -22,10 +22,16 @@ const ProfileCard = ({ profile, footprints }) => {
     <Link to={`/profiles/${profile.profile.id}`} state={profile} >
       <div className="card">
         <h1 className="card-title">{profile.profile.name}</h1>
-        <h5>Total Footprint</h5>
-        <p>{totalGrams} g / {totalTons} tons</p>
-        <h5>Average</h5>
-        <p>{(totalGrams / gramsArray.length).toFixed(0)} g / footprint</p>
+        <section className="profilecard-footprints">
+          <div className="total">
+            <h5>Total Footprint</h5>
+            <p>{totalGrams} g / {totalTons} tons</p>
+          </div>
+          <div className="average">
+            <h5>Average Footprint</h5>
+            <p>{(totalGrams / gramsArray.length).toFixed(0)} g / footprint</p>
+          </div>
+        </section>
       </div>
     </Link>
    );
