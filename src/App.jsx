@@ -36,7 +36,7 @@ const App = () => {
   //icons
   const transportIcons = [Bike, Walk, Scooter, Car]
   const greenTransportIcons = [BikeGreen, WalkGreen, ScooterGreen, CarGreen]
-
+  
   //useEffects
   useEffect(() => {
     const fetchData = async () => {
