@@ -9,7 +9,7 @@ const Profiles = ({ profiles, footprints }) => {
   return (
     <>
       <br />
-      <h1>How does your footprint compare to others?</h1>
+      <h1>Profiles</h1>
       <section className='profiles'>
         {profiles?.length ? 
           <>
