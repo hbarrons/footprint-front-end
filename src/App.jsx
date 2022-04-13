@@ -21,6 +21,10 @@ import Bike from './assets/bike.png'
 import Walk from './assets/walking.png'
 import Scooter from './assets/scooter.png'
 import Car from './assets/car.png'
+import BikeGreen from './assets/bikegreen.png'
+import WalkGreen from './assets/walkinggreen.png'
+import ScooterGreen from './assets/scootergreen.png'
+import CarGreen from './assets/cargreen.png'
 
 
 const App = () => {
@@ -31,6 +35,7 @@ const App = () => {
 
   //icons
   const transportIcons = [Bike, Walk, Scooter, Car]
+  const greenTransportIcons = [BikeGreen, WalkGreen, ScooterGreen, CarGreen]
 
   //useEffects
   useEffect(() => {
@@ -88,7 +93,7 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route path="/footprints" element={<Footprints footprints={footprints} user={user} transportIcons={transportIcons}/>} />
+        <Route path="/footprints" element={<Footprints footprints={footprints} user={user} transportIcons={transportIcons} greenTransportIcons={greenTransportIcons}/>} />
         <Route path="/footprints/new" element={<FootprintForm user={user} addFootprint={addFootprint}/>} />
         <Route path="/footprints/:id" element={<FootprintDetails deleteFootprint={deleteFootprint} transportIcons={transportIcons}/>} />
         <Route path="footprints/:id/edit" element={<FootprintForm updateFootprint={updateFootprint} user={user}/>} />

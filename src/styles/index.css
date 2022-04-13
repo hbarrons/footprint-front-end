@@ -28,7 +28,6 @@ div.card {
 
 div.card:hover {
   box-shadow: 2px 4px rgb(172,200,141);
-  
 }
 
 .footprints {
@@ -37,7 +36,16 @@ div.card:hover {
 }
 
 .title {
-  margin: 200px;
+  margin: 160px;
   color: green;
   font-size: 160px;
+}
+
+@media only screen and (max-width: 860px) {
+  .title {
+    margin: 160px;
+    color: green;
+    font-size: 100px;
+  }
+
 }

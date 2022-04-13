@@ -2,7 +2,7 @@ import FootprintCard from "../../components/FootprintCard/FootPrintCard";
 import './Footprints.css'
 
 
-const Footprints = ({ footprints, user, transportIcons }) => {
+const Footprints = ({ footprints, user, transportIcons, greenTransportIcons }) => {
 
   let gramsArray = footprints?.map((footprint) => {
     let total = 0
@@ -19,7 +19,7 @@ const Footprints = ({ footprints, user, transportIcons }) => {
 
   let totalTons = (totalGrams * 0.0000011023).toString().slice(0, 5)
 
-  console.log(typeof(totalTons))
+  console.log("greenTransportIcons: ", greenTransportIcons)
 
   return ( 
     <>
@@ -27,16 +27,18 @@ const Footprints = ({ footprints, user, transportIcons }) => {
       <h1>Total Footprint </h1>
       <h3>{totalGrams} g / {totalTons} tons</h3>
       <br /><br />
+      <h1>Average</h1>
+      <h3>{(totalGrams / gramsArray.length).toFixed(0)} g / footprint</h3>
       <h3>Footprints</h3>
       <section className="footprints">
           <>
             {footprints.slice(0).reverse().map((footprint) => {
-              console.log(footprint.profile_id)
               if (footprint.profile_id === user?.id) {
                 return <FootprintCard
                   footprint={footprint}
                   key={footprint.id}
                   transportIcons={transportIcons}
+                  greenTransportIcons={greenTransportIcons}
                 />
               }
             })}

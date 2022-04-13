@@ -9,7 +9,7 @@ const Profiles = ({ profiles, footprints }) => {
   return (
     <>
       <br />
-      <h1>Profiles</h1>
+      <h1>See How Your Footprint Compares!</h1>
       <section className='profiles'>
         {profiles?.length ? 
           <>
