@@ -65,17 +65,19 @@ const App = () => {
 
   //footprints
   const addFootprint = async (footprintData) => {
-    console.log("new data:", footprintData)
     const footprint = await footprintService.create(footprintData)
     setFootprints([...footprints, footprint])
   }
 
-  const updateFootprint = async (footprintData) => {
-    console.log("updated data:", footprintData)
-    // const updatedFootprint = await footprintService.update(footprintData)
-    // setFootprints(footprints.map((footprint) => (
-    //   footprint.id === updatedFootprint.id ? updatedFootprint : footprint
-    // )))
+  const updateFootprint = async (footprintData, id) => {
+    const updatedFootprint = await footprintService.update(footprintData, id)
+    console.log("footprintData", footprintData)
+    console.log("id", id)
+    console.log(updatedFootprint)
+    setFootprints(footprints.map((footprint) => (
+      footprint.id === parseInt(id) ? updatedFootprint : footprint
+      )))
+      console.log("footprints: ", footprints)
   }
 
   const deleteFootprint = async (id) => {

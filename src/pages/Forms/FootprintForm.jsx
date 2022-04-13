@@ -17,7 +17,7 @@ const FootprintForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 		// Conditionally call upon appropriate function
-    id ? props.updateFootprint(form) : props.addFootprint(form)
+    id ? props.updateFootprint(form, id) : props.addFootprint(form)
     navigate(`/footprints`)
   }
 

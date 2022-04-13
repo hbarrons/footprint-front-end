@@ -3,12 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 
 const FootprintDetails = ({ deleteFootprint, transportIcons }) => {
   let location = useLocation()
-
   let readDate = (location.state.footprint.created_at).substring(0, 16)
-  console.log(readDate)
-
   let idx = location.state.footprint?.transport_mode === 'walking' ? 1 : location.state.footprint?.transport_mode === 'e-bike' ? 2 : location.state.footprint?.transport_mode === 'driving' ? 3 : location.state.footprint?.transport_mode === 'cycling' ? 0 : ""
-
 
   return ( 
     <>

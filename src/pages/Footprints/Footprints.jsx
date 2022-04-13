@@ -15,11 +15,9 @@ const Footprints = ({ footprints, user, transportIcons, greenTransportIcons }) =
   let totalGrams = gramsArray.length ?
     gramsArray?.reduce((a, b) => a + b)
     :
-    console.log("empty array")
+    ""
 
   let totalTons = (totalGrams * 0.0000011023).toString().slice(0, 5)
-
-  console.log("greenTransportIcons: ", greenTransportIcons)
 
   return ( 
     <>
