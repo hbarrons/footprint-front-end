@@ -39,6 +39,7 @@ const Footprints = ({ footprints, user, transportIcons, greenTransportIcons }) =
                   greenTransportIcons={greenTransportIcons}
                 />
               }
+              return null
             })}
           </>
       </section>
