@@ -22,13 +22,13 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
 
   footprints.map((footprint) => {
     if (footprint.profile_id === location.state?.profile.id) {
-      if(footprint.transport_mode === 'bicycle') {
+      if(footprint.transport_mode === 'cycling') {
         bike.push(footprint.transport_mode)
       } else if (footprint.transport_mode === 'e-bike'){
         escooter.push(footprint.transport_mode)
       } else if (footprint.transport_mode === 'walking') {
         walk.push(footprint.transport_mode)
-      } else if (footprint.transport_mode === 'cycling') {
+      } else if (footprint.transport_mode === 'driving') {
         drive.push(footprint.transport_mode)
       }
       if (bike.length >= escooter.length && bike.length >= walk.length && bike.length >= drive.length) {
@@ -43,6 +43,13 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
     }
     return ""
   })
+
+
+  console.log("idx: ", idx)
+  console.log("bike: ", bike.length)
+  console.log("walk: ", walk.length)
+  console.log("escooter: ", escooter.length)
+  console.log("drive: ", drive.length)
 
   let totalGrams = gramsArray.length ?
     gramsArray?.reduce((a, b) => a + b)

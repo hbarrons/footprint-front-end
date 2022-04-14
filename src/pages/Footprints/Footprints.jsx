@@ -18,8 +18,6 @@ const Footprints = ({ footprints, user, transportIcons, greenTransportIcons }) =
     ""
 
   let totalTons = (totalGrams * 0.0000011023).toString().slice(0, 5)
-  console.log(totalGrams)
-  console.log(typeof(gramsArray[0]))
 
   return ( 
     <>
