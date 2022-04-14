@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import './FootprintDetails.css'
 
 
 const FootprintDetails = ({ deleteFootprint, transportIcons }) => {
@@ -8,18 +9,20 @@ const FootprintDetails = ({ deleteFootprint, transportIcons }) => {
 
   return ( 
     <>
-      <div className="details">
-        <h1>Footprint Info</h1>
-        <h4>{readDate}</h4>
-        <img src={transportIcons[idx]} alt="transportation mode icon" />
-        <h4>Distance: {location.state.footprint.distance} miles</h4>
-        <h4>CO2: {location.state.footprint.carbon_grams}g</h4>
-        <h4>Starting ZIP: {location.state.footprint.start}</h4>
-        <h4>Ending ZIP: {location.state.footprint.end}</h4>
-        <Link to={`/footprints/${location.state.footprint.id}/edit`}>
-          <button className="btn btn-primary">Update</button>
-        </Link>
-        <button onClick={() => deleteFootprint(location.state.footprint.id)}  className="btn btn-danger">Delete</button>
+      <div className="footprintdetails">
+        <div className="card">
+          <h1>Footprint Info</h1>
+          <h4>{readDate}</h4>
+          <img src={transportIcons[idx]} alt="transportation mode icon" />
+          <h4>Distance: {location.state.footprint.distance} miles</h4>
+          <h4>CO2: {location.state.footprint.carbon_grams}g</h4>
+          <h4>Starting ZIP: {location.state.footprint.start}</h4>
+          <h4>Ending ZIP: {location.state.footprint.end}</h4>
+          <Link to={`/footprints/${location.state.footprint.id}/edit`} className='buttons'>
+            <button className="btn btn-primary">Update</button>
+          </Link>
+          <button onClick={() => deleteFootprint(location.state.footprint.id)}  className="btn btn-danger">Delete</button>
+        </div>
       </div>
     </>
    );

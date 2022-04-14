@@ -22,7 +22,7 @@ div.card {
   width: 350px;
   display: flex;
   align-items: left;
-  margin: 15px;
+  /* margin: 15px; */
   padding: 10px;
   background-color: rgb(172,200,141, 0.6);
 }

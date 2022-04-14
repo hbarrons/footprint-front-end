@@ -11,8 +11,8 @@ const FootprintCard = ({ footprint, transportIcons, greenTransportIcons }) => {
     <Link to={`/footprints/${footprint.id}`} state={{footprint}}>
       <div className="card profilecard">
         <h2 className='card-title cardcolor'>{readDate}</h2>
-        <div>
-          <img src={transportIcons[idx]} onMouseOver={e => e.currentTarget.src = greenTransportIcons[idx]} onMouseOut={e => e.currentTarget.src = transportIcons[idx]}   alt=""/>
+        <div onMouseEnter={e=> e.currentTarget.lastChild.src = greenTransportIcons[idx] } onMouseLeave={e => e.currentTarget.lastChild.src = transportIcons[idx]}>
+          <img src={transportIcons[idx]} alt="" />
         </div>
         <h5 className='card-text'>Distance: {footprint.distance} miles</h5>
         <h5 className='card-text'>CO2 (g): {footprint.carbon_grams}</h5>

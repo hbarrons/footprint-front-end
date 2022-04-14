@@ -2,20 +2,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: auto;
 }
 
 .profilecard {
-  width: 800px;
+  width: 150px;
 }
 
 .total {
-  margin: 5px;
-  width: 270px;
+  width: 150px;
   font-size: 16px;
 }
 
 .average {
   margin: 5px;
-  width: 260px;
+  width: 180px;
   font-size: 16px;
+}
+
+button {
+  margin: 5px;
 }
