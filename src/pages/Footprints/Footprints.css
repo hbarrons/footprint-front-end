@@ -8,3 +8,20 @@
 a {
   margin: 15px;
 }
+
+.footprints-headers {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-header {
+  margin-top: 20px;
+  margin-right: 70px;
+}
+
+.average-header {
+  margin-top: 20px;
+  margin-left: 70px;
+}

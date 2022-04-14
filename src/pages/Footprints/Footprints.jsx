@@ -23,13 +23,16 @@ const Footprints = ({ footprints, user, transportIcons, greenTransportIcons }) =
 
   return ( 
     <>
-      <br />
-      <h1>Total Footprint </h1>
-      <h3>{totalGrams} g / {totalTons} tons</h3>
-      <br /><br />
-      <h1>Average</h1>
-      <h3>{(totalGrams / gramsArray.length).toFixed(0)} g / footprint</h3>
-      <h3>Footprints</h3>
+      <div className="footprints-headers">
+        <div className="total-header">
+          <h1>Total Footprint </h1>
+          <h3>{totalGrams} g / {totalTons} tons</h3>
+        </div>
+        <div className="average-header">
+          <h1>Average</h1>
+          <h3>{(totalGrams / gramsArray.length).toFixed(0)} g / footprint</h3>
+        </div>
+      </div>
       <section className="footprints">
           <>
             {footprints.slice(0).reverse().map((footprint) => {
