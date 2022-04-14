@@ -5,10 +5,6 @@ import './NavBar.css'
 
 
 const NavBar = ({ user, handleLogout }) => {
-
-  
-
-
   return (
     <>
       {user ?
