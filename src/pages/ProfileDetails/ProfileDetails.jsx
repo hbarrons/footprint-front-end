@@ -54,28 +54,30 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
   return ( 
     <>
       <h1 className="username">{location.state?.profile?.name}'s Footprint</h1>
-      <section className="profiledetails">
-        <div className="totalprint">
-          <h2>Total Footprint </h2>
-          <div className="grams-tons">
-            {totalGrams} g / {totalTons} tons
+      <section className="profilesection">
+        <div className="profiledetails">
+          <div className="totalprint">
+            <h2>Total Footprint </h2>
+            <div className="grams-tons">
+              {totalGrams} g / {totalTons} tons
+            </div>
           </div>
-        </div>
-        <div className="averageprint">
-          <h2>Average Footprint </h2>
-          <div className="averages">
-            {(totalGrams / gramsArray.length).toFixed(0)} g / footprint
+          <div className="averageprint">
+            <h2>Average Footprint </h2>
+            <div className="averages">
+              {(totalGrams / gramsArray.length).toFixed(0)} g / footprint
+            </div>
           </div>
-        </div>
-        <div className="numberprints">
-          <h2 className="numbertitle">Number of Footprints</h2>
-          <div className="number">
-            {gramsArray.length}
+          <div className="numberprints">
+            <h2 className="numbertitle">Number of Footprints</h2>
+            <div className="number">
+              {gramsArray.length}
+            </div>
           </div>
-        </div>
-        <div className="preference">
-          <h2>Preferred Transportation </h2>
-            <img src={transportIcons[idx]} alt="" />
+          <div className="preference">
+            <h2>Preferred Transportation </h2>
+              <img src={transportIcons[idx]} alt="" />
+          </div>
         </div>
       </section>
     </>

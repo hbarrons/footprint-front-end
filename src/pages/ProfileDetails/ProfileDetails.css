@@ -6,6 +6,12 @@
   margin-right: 40px;
 }
 
+.profilesection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .profiledetails {
   display: grid;
   grid-template-columns: 50% 50%;
