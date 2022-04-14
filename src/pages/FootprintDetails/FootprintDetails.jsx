@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import moment from 'moment'
 import './FootprintDetails.css'
 
 
@@ -12,7 +13,7 @@ const FootprintDetails = ({ deleteFootprint, transportIcons }) => {
       <div className="footprintdetails">
         <div className="card">
           <h1>Footprint Info</h1>
-          <h4>{readDate}</h4>
+          <h4>{moment(location.state.footprint?.created_at).format("MMMM Do YYYY")}</h4>
           <img src={transportIcons[idx]} alt="transportation mode icon" />
           <h4>Distance: {location.state.footprint.distance} miles</h4>
           <h4>CO2: {location.state.footprint.carbon_grams}g</h4>

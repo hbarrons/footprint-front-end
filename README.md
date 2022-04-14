@@ -18,6 +18,8 @@ Footprint was built using Python/Flask/PostgreSQL for the server-side and React/
 
 ## Future Enhancements
 - Add a page with emmission data for common activities in order to provide a larger context to each users Footprint
+- Add input field for Commute Date
+- Research API options to add exact addresses and public transportation option
 - Dark Mode
 - Populate Edit Footprint Form with current values
 
