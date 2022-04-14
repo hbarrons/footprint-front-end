@@ -44,7 +44,7 @@ div.card:hover {
 
 @media only screen and (max-width: 860px) {
   .title {
-    margin: 160px;
+    margin: 110px;
     color: green;
     font-size: 80px;
   }
