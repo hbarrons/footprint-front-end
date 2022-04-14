@@ -1,6 +1,7 @@
 import './FootprintForm.css'
 
 const FootprintInput = ({ form, handleChange }) => {
+  console.log(form)
   return (
     <>
       <label htmlFor="start">Start (zip code):</label>
@@ -24,7 +25,7 @@ const FootprintInput = ({ form, handleChange }) => {
       <label htmlFor="numPassengers">Number of Passengers:</label>
       <input
         value={form?.numPassengers ? form?.numPassengers : ''} onChange={handleChange} id="numPassengers"
-        required name="numPassengers" type="number"autoComplete="off"
+        required name="numPassengers" type="number" autoComplete="off"
       />
     </>
   )
