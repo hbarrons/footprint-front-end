@@ -69,8 +69,8 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
         </div>
         <div className="numberprints">
           <h2 className="numbertitle">Number of Footprints</h2>
-          <div>
-            <br /><br />{gramsArray.length} <br />
+          <div className="number">
+            {gramsArray.length}
           </div>
         </div>
         <div className="preference">

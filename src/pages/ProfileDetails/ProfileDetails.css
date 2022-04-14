@@ -14,7 +14,8 @@
   border-radius: 25px;
   margin: 20px;
   padding: 40px;
-  background-color: rgb(172,200,141, 0.4)
+  background-color: rgb(172,200,141, 0.4);
+  margin-bottom: 50px;
 }
 
 .totalprint {
@@ -30,8 +31,8 @@
   margin: 5px;
 }
 
-.gramstons {
-  font-size: 30px;
+.grams-tons, .averages {
+  font-size: 25px;
 }
 
 .averageprint {
@@ -53,6 +54,13 @@
   flex-flow: wrap;
   align-items: center;
   justify-content: center;
+  background-color: rgb(117, 176, 63, 0.4);
+  border-radius: 25px;
+}
+
+.number {
+  font-size: 40px;
+  margin-bottom: ;
 }
 
 .preference {
@@ -78,7 +86,8 @@
     border-radius: 25px;
     margin: 20px;
     padding: 40px;
-    background-color: rgb(172,200,141, 0.4)
+    background-color: rgb(172,200,141, 0.4);
+    margin-bottom: 200px;
   }
 
   h2 {
