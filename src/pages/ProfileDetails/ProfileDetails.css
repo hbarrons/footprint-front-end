@@ -1,0 +1,134 @@
+.username {
+  margin-top: 50px;
+}
+
+.numbertitle {
+  margin-right: 40px;
+}
+
+.profiledetails {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 200px 220px;
+  border: 1px solid green;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 40px;
+  background-color: rgb(172,200,141, 0.4)
+}
+
+.totalprint {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  background-color: rgb(117, 176, 63, 0.4);
+  border-radius: 25px;
+  margin: 5px;
+}
+
+.gramstons {
+  font-size: 30px;
+}
+
+.averageprint {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  background-color: rgb(117, 176, 63, 0.4);
+  border-radius: 25px;
+  margin: 5px;
+}
+
+.numberprints {
+  width: 300px;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.preference {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  background-color: rgb(117, 176, 63, 0.4);
+  border-radius: 25px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 860px) {
+  .profiledetails {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid green;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 40px;
+    background-color: rgb(172,200,141, 0.4)
+  }
+
+  h2 {
+    margin: 30px;
+  }
+
+  .totalprint {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    background-color: rgb(117, 176, 63, 0.4);
+    border-radius: 25px;
+    margin: 5px;
+  }
+  
+  .averageprint {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background-color: rgb(117, 176, 63, 0.4);
+    border-radius: 25px;
+    margin: 5px;
+  }
+  
+  .numberprints {
+    width: 300px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(117, 176, 63, 0.4);
+    border-radius: 25px;
+    margin: 5px;
+  }
+  
+  .preference {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(117, 176, 63, 0.4);
+    border-radius: 25px;
+    margin: 5px;
+  }
+
+}

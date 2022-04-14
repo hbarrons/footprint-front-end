@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import './ProfileDetails.css'
 
 const ProfileDetails = ({ footprints, transportIcons }) => {
   let location = useLocation()
@@ -43,15 +44,6 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
     return ""
   })
 
-
-  console.log("bike", bike.length)
-  console.log("scooter", escooter.length)
-  console.log("drive", drive.length)
-  console.log("walk", walk.length)
-  console.log("idx: ", idx)
-
-
-
   let totalGrams = gramsArray.length ?
     gramsArray?.reduce((a, b) => a + b)
     :
@@ -59,19 +51,32 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
 
   let totalTons = (totalGrams * 0.0000011023).toString().slice(0, 5)
 
-  console.log("idx: ", idx)
-
   return ( 
     <>
-      <section>
-        <h1>{location.state?.profile?.name}'s Footprint</h1>
-        <h2>Total Footprint <br />{totalGrams} g / {totalTons} tons</h2>
-        <br />
-        <h2>Average Footprint <br /> {(totalGrams / gramsArray.length).toFixed(0)} g / footprint</h2>
-        <br />
-        <h2>Preferred Transportation <br />
-          <img src={transportIcons[idx]} alt="" />
-        </h2>
+      <h1 className="username">{location.state?.profile?.name}'s Footprint</h1>
+      <section className="profiledetails">
+        <div className="totalprint">
+          <h2>Total Footprint </h2>
+          <div className="grams-tons">
+            {totalGrams} g / {totalTons} tons
+          </div>
+        </div>
+        <div className="averageprint">
+          <h2>Average Footprint </h2>
+          <div className="averages">
+            {(totalGrams / gramsArray.length).toFixed(0)} g / footprint
+          </div>
+        </div>
+        <div className="numberprints">
+          <h2 className="numbertitle">Number of Footprints</h2>
+          <div>
+            <br /><br />{gramsArray.length} <br />
+          </div>
+        </div>
+        <div className="preference">
+          <h2>Preferred Transportation </h2>
+            <img src={transportIcons[idx]} alt="" />
+        </div>
       </section>
     </>
    );
