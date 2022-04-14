@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './FootPrintCard.css'
+import moment from 'moment'
 
 const FootprintCard = ({ footprint, transportIcons, greenTransportIcons }) => {
 
@@ -10,7 +11,7 @@ const FootprintCard = ({ footprint, transportIcons, greenTransportIcons }) => {
   return ( 
     <Link to={`/footprints/${footprint.id}`} state={{footprint}}>
       <div className="card profilecard">
-        <h2 className='card-title cardcolor'>{readDate}</h2>
+        <h2 className='card-title cardcolor'>{moment(footprint?.created_at).format("MMMM Do YYYY")}</h2>
         <div onMouseEnter={e=> e.currentTarget.lastChild.src = greenTransportIcons[idx] } onMouseLeave={e => e.currentTarget.lastChild.src = transportIcons[idx]}>
           <img src={transportIcons[idx]} alt="" />
         </div>

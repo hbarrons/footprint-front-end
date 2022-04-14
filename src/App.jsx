@@ -12,6 +12,7 @@ import FootprintForm from './pages/Forms/FootprintForm'
 import Footprints from './pages/Footprints/Footprints'
 import FootprintDetails from './pages/FootprintDetails/FootprintDetails'
 
+
 //styles
 import './styles/index.css'
 import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
