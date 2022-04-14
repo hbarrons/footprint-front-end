@@ -71,7 +71,7 @@ const ProfileDetails = ({ footprints, transportIcons }) => {
           <div className="numberprints">
             <h2 className="numbertitle">Number of Footprints</h2>
             <div className="number">
-              {gramsArray.length}
+              {transportArr.length}
             </div>
           </div>
           <div className="preference">
