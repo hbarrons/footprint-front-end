@@ -27,18 +27,19 @@ const FootprintForm = (props) => {
 
   return (
     <>
-      <div className="page-header">
-        {id
-          ? <h1 className='addedit-fp'>Edit Footprint</h1>
-          : <><h1 className='addedit-fp'>Add Footprint</h1></>
-        }
-      </div>
-
       <section className="form-container">
-        <form onSubmit={handleSubmit}>
-          <FootprintInput form={form} handleChange={handleChange} />
-          <button type="submit" className="btn btn-success">Submit!</button>
-        </form>
+        <div className='footprint-form'>
+          <div className="page-header">
+            {id
+              ? <h1 className='addedit-fp'>Edit Footprint</h1>
+              : <><h1 className='addedit-fp'>Add Footprint</h1></>
+            }
+          </div>
+          <form onSubmit={handleSubmit}>
+            <FootprintInput form={form} handleChange={handleChange} />
+            <button type="submit" className="btn btn-success">Submit!</button>
+          </form>
+        </div>
       </section>
     </>
   )
