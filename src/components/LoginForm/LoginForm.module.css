@@ -19,3 +19,8 @@ main {
   margin-top: 100px;
 }
 
+.login {
+  display: flex;
+  border-radius: 25px;
+}
+
